@@ -1301,9 +1301,9 @@ $.fn.position = function( options ) {
 			}
 		});
 
-		if ( options.using ) {
+		if ( options.usings ) {
 			// adds feedback as second argument to using callback, if present
-			using = function( props ) {
+			usings = function( props ) {
 				var left = targetOffset.left - position.left,
 					right = left + targetWidth - elemWidth,
 					top = targetOffset.top - position.top,
@@ -1337,7 +1337,7 @@ $.fn.position = function( options ) {
 				} else {
 					feedback.important = "vertical";
 				}
-				options.using.call( this, props, feedback );
+				options.usings.call( this, props, feedback );
 			};
 		}
 
